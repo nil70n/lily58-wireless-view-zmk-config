@@ -83,12 +83,10 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CW_CPS";
             #binding-cells = <0>;
-            bindings = <&caps_word>, <&kp CAPS>;
+            bindings = <&sk LSHFT>, <&caps_word>;
         };
-        
-        caps_word: caps_word {
-            continue-list = <UNDERSCORE MINUS>;
-        };
+
+        caps_word: caps_word { continue-list = <UNDERSCORE MINUS>; };
     };
 
     keymap {
@@ -108,7 +106,7 @@
 &kp HOME   &kp Q   &kp W        &kp E        &kp R           &kp T                                   &kp Y     &kp U       &kp I        &kp O        &kp P     &kp GRAVE
 &kp END    &kp A   &mt LCTRL S  &mt LSHFT D  &mt LEFT_ALT F  &kp G                                   &kp H     &mt RALT J  &mt RSHFT K  &mt RCTRL L  &kp SEMI  &kp SQT
 &kp LGUI   &kp Z   &kp X        &kp C        &kp V           &kp B            &kp LBKT     &kp RBKT  &kp N     &kp M       &kp COMMA    &kp DOT      &kp FSLH  &kp RGUI
-                                &lyr1        &kp ESC         &hd_cps LSHFT 0  &kp SPACE    &kp RET   &kp BSPC  &kp DEL     &lyr2
+                                &lyr1        &lt 1 ESC       &hd_cps LSHFT 0  &kp SPACE    &kp RET   &kp BSPC  &lt 2 DEL   &lyr2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
