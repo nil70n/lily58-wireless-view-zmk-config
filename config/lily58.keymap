@@ -86,7 +86,7 @@
             bindings = <&caps_word>, <&kp CAPS>;
         };
         
-        &caps_word {
+        caps_word: caps_word {
             continue-list = <UNDERSCORE MINUS>;
         };
     };
