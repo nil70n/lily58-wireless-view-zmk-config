@@ -85,6 +85,10 @@
             #binding-cells = <0>;
             bindings = <&caps_word>, <&kp CAPS>;
         };
+        
+        &caps_word {
+            continue-list = <UNDERSCORE MINUS>;
+        };
     };
 
     keymap {
