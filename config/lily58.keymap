@@ -57,7 +57,7 @@
             bindings = <&kp LEFT>, <&kp HOME>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LALT)>;
         };
 
         down_pg: down_pg {
@@ -66,7 +66,7 @@
             bindings = <&kp DOWN>, <&kp PG_DN>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LALT)>;
         };
 
         up_pg: up_pg {
@@ -75,7 +75,7 @@
             bindings = <&kp UP>, <&kp PG_UP>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LALT)>;
         };
 
         right_end: right_end {
@@ -84,7 +84,7 @@
             bindings = <&kp RIGHT>, <&kp END>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LALT)>;
         };
 
         mleft_scr: mleft_scr {
