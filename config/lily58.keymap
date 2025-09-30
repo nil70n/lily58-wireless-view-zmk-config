@@ -22,6 +22,11 @@
             bindings = <&caps_word>;
             key-positions = <25 26>;
         };
+
+        win {
+            bindings = <&kp RGUI>;
+            key-positions = <31 32>;
+        };
     };
 
     behaviors {
@@ -144,11 +149,11 @@
 
             display-name = "Base";
             bindings = <
-&kp GRAVE &kp F1  &kp F2       &kp F3       &kp F4          &kp F5                                          &kp F6     &kp F7      &kp F8       &kp F9       &kp F10   &kp F11
-&none     &kp Q   &kp W        &kp E        &kp R           &kp T                                           &kp Y      &kp U       &kp I        &kp O        &kp P     &kp F12
-&none     &kp A   &mt LCTRL S  &mt LSHFT D  &mt LEFT_ALT F  &kp G                                           &kp H      &mt RALT J  &mt RSHFT K  &mt RCTRL L  &kp SEMI  &none
-&kp LGUI  &kp Z   &kp X        &kp C        &kp V           &kp B                &kp K_UNDO    &kp K_REDO   &kp N      &kp M       &kp COMMA    &kp DOT      &kp FSLH  &kp RGUI
-                               &tog 2       &lt 2 ESC       &hd_cps LSHFT LSHFT  &kp SPACE     &lt 1 ENTER  &bspc_del  &sl 1       &tog 1
+&kp GRAVE  &kp F1  &kp F2       &kp F3       &kp F4          &kp F5                                          &kp F6     &kp F7      &kp F8       &kp F9       &kp F10   &kp F11
+&none      &kp Q   &kp W        &kp E        &kp R           &kp T                                           &kp Y      &kp U       &kp I        &kp O        &kp P     &kp F12
+&none      &kp A   &mt LCTRL S  &mt LSHFT D  &mt LEFT_ALT F  &kp G                                           &kp H      &mt RALT J  &mt RSHFT K  &mt RCTRL L  &kp SEMI  &none
+&kp LGUI   &kp Z   &kp X        &kp C        &kp V           &kp B                &kp K_UNDO    &kp K_REDO   &kp N      &kp M       &kp COMMA    &kp DOT      &kp FSLH  &none
+                                &tog 2       &lt 2 ESC       &hd_cps LSHFT LSHFT  &kp SPACE     &lt 1 ENTER  &bspc_del  &sl 1       &tog 1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -164,10 +169,10 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &trans        &trans           &trans                  &trans                  &trans                                        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&trans  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3            &kp NUMBER_4            &kp N5                                        &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp N9        &kp N0        &trans
-&trans  &kp MINUS     &mt LCTRL EQUAL  &mt LSHFT LEFT_BRACKET  &mt LALT RIGHT_BRACKET  &kp GRAVE                                     &left_home    &down_pg      &up_pg        &right_end    &kp SQT       &trans
-&trans  &kp INS       &kp SCROLLLOCK   &kp CAPSLOCK            &kp PSCRN               &kp LG(SPACE)  &kp LC(MINUS)    &kp RC(PLUS)  &kp RG(C)     &none         &none         &none         &kp BSLH      &trans
+&trans  &trans        &trans           &trans                  &trans                  &trans                                        &trans        &trans        &trans  &trans      &trans    &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3            &kp NUMBER_4            &kp N5                                        &kp NUMBER_6  &kp NUMBER_7  &kp N8  &kp N9      &kp N0    &trans
+&trans  &kp MINUS     &mt LCTRL EQUAL  &mt LSHFT LEFT_BRACKET  &mt LALT RIGHT_BRACKET  &kp GRAVE                                     &left_home    &down_pg      &up_pg  &right_end  &kp SQT   &trans
+&trans  &kp INS       &kp SCROLLLOCK   &kp CAPSLOCK            &kp PSCRN               &kp LG(SPACE)  &kp LC(MINUS)    &kp RC(PLUS)  &kp RG(C)     &none         &none   &none       &kp BSLH  &trans
                                        &trans                  &trans                  &trans         &trans           &trans        &trans        &trans        &trans
             >;
 
@@ -177,11 +182,11 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-&trans  &trans        &trans           &trans                  &trans                  &trans                                        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&trans  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3            &kp NUMBER_4            &kp N5                                        &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp N9        &kp N0        &trans
-&trans  &kp MINUS     &mt LCTRL EQUAL  &mt LSHFT LEFT_BRACKET  &mt LALT RIGHT_BRACKET  &kp GRAVE                                     &mleft_scr    &mdown_scr    &mup_scr      &mright_scr   &kp SQT       &trans
-&trans  &kp INS       &kp SCROLLLOCK   &kp CAPSLOCK            &kp PSCRN               &kp LG(SPACE)  &kp LC(MINUS)    &kp RC(PLUS)  &kp RG(C)     &none         &none         &none         &kp BSLH      &trans
-                                       &trans                  &trans                  &trans         &trans           &mclk         &trans        &trans        &trans
+&bt BT_CLR      &bt BT_PRV    &bt BT_NXT       &trans                  &trans                  &trans                                        &trans        &trans        &trans    &trans       &trans    &trans
+&bt BT_CLR_ALL  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3            &kp NUMBER_4            &kp N5                                        &kp NUMBER_6  &kp NUMBER_7  &kp N8    &kp N9       &kp N0    &trans
+&trans          &kp MINUS     &mt LCTRL EQUAL  &mt LSHFT LEFT_BRACKET  &mt LALT RIGHT_BRACKET  &kp GRAVE                                     &mleft_scr    &mdown_scr    &mup_scr  &mright_scr  &kp SQT   &trans
+&trans          &kp INS       &kp SCROLLLOCK   &kp CAPSLOCK            &kp PSCRN               &kp LG(SPACE)  &kp LC(MINUS)    &kp RC(PLUS)  &kp RG(C)     &none         &none     &none        &kp BSLH  &trans
+                                               &trans                  &trans                  &trans         &trans           &mclk         &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
