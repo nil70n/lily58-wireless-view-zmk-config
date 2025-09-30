@@ -152,7 +152,25 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        extra_1 { status = "reserved"; };
+        symbol_layer {
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
+            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
+            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
+            //                     |      |      |      |        |  |       |      |       |       |
+
+            display-name = "Symbol";
+            bindings = <
+&trans  &trans   &trans     &trans     &trans    &trans                               &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4  &bt BT_CLR
+&none   &kp INS  &none      &none      &none     &none                                &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_LEFT   &none         &trans
+&none   &none    &kp LCTRL  &kp LSHFT  &kp LALT  &kp PSCRN                            &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp HOME      &kp END
+&trans  &none    &none      &none      &none     &none      &kp K_UNDO    &kp K_REDO  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp RCTRL     &trans
+                            &trans     &trans    &trans     &trans        &mclk       &trans          &trans          &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
 
         extra_2 { status = "reserved"; };
 
