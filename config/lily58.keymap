@@ -181,7 +181,7 @@
 &trans  &trans   &trans     &trans     &trans    &trans                               &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4  &bt BT_CLR
 &none   &kp INS  &none      &none      &none     &none                                &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_LEFT   &none         &trans
 &none   &none    &kp LCTRL  &kp LSHFT  &kp LALT  &kp PSCRN                            &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp HOME      &kp END
-&trans  &none    &none      &none      &none     &none      &kp K_UNDO    &kp K_REDO  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp RCTRL     &trans
+&trans  &none    &none      &none      &none     &none      &kp K_UNDO    &kp K_REDO  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp BSLH      &trans
                             &trans     &trans    &trans     &trans        &mclk       &trans          &trans          &trans
             >;
 
@@ -198,11 +198,11 @@
 
             display-name = "Symbol";
             bindings = <
-&trans  &trans        &trans           &trans                  &trans                  &trans                                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4  &bt BT_CLR
-&none   &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3            &kp NUMBER_4            &kp N5                                 &kp NUMBER_6    &kp NUMBER_7    &kp N8        &kp N9           &kp N0        &trans
-&none   &kp MINUS     &mt LCTRL EQUAL  &mt LSHFT LEFT_BRACKET  &mt LALT RIGHT_BRACKET  &kp GRAVE                              &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp SQT       &kp END
-&trans  &kp INS       &kp K_APP        &kp CAPSLOCK            &kp SCROLLLOCK          &kp LG(SPACE)  &kp HOME    &kp K_REDO  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp RCTRL     &trans
-                                       &trans                  &trans                  &trans         &trans      &mclk       &trans          &trans          &trans
+&trans  &trans        &trans           &trans                  &trans                  &trans                                        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4  &bt BT_CLR
+&none   &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3            &kp NUMBER_4            &kp N5                                        &kp NUMBER_6    &kp NUMBER_7    &kp N8        &kp N9           &kp N0        &trans
+&none   &kp MINUS     &mt LCTRL EQUAL  &mt LSHFT LEFT_BRACKET  &mt LALT RIGHT_BRACKET  &kp GRAVE                                     &left_home      &down_pg        &up_pg        &right_end       &kp SQT       &trans
+&trans  &kp INS       &kp SCROLLLOCK   &kp CAPSLOCK            &kp PSCRN               &kp LG(SPACE)  &kp LC(MINUS)    &kp RC(PLUS)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp BSLH      &trans
+                                       &trans                  &trans                  &trans         &trans           &mclk         &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
